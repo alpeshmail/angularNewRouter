@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+
+<head>
+  <script data-require="jquery@2.1.4" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <link data-require="bootstrap@3.3.2" data-semver="3.3.2" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+  <script data-require="bootstrap@3.3.2" data-semver="3.3.2" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script data-require="angular.js@1.4.0" data-semver="1.4.0" src="https://code.angularjs.org/1.4.0/angular.js"></script>
+  <script data-require="angular-aria@1.4.0" data-semver="1.4.0" src="https://code.angularjs.org/1.4.0/angular-aria.js"></script>
+  <script data-require="angular-animate@1.4.0" data-semver="1.4.0" src="https://code.angularjs.org/1.4.0/angular-animate.js"></script>
+  <script data-require="angular-messages@1.4.0" data-semver="1.4.0" src="https://code.angularjs.org/1.4.0/angular-messages.js"></script>
+  <script data-require="angular-new-router@0.5.3" data-semver="0.5.3" src="https://cdn.rawgit.com/angular/router/v0.5.3/dist/router.es5.js"></script>
+  <link data-require="angular-material@0.9.0" data-semver="0.9.0" rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.0/angular-material.min.css" />
+  <script data-require="angular-material@0.9.0" data-semver="0.9.0" src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.0/angular-material.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+  <script src="./components/home/home.js"></script>
+  <script src="./components/detail/detail.js"></script>
+</head>
+
+<body ng-strict-di ng-controller="AppController">
+  <md-toolbar class="md-primary">
+    <h2 class="md-toolbar-tools">
+        <span>Angular - New Router</span>
+      </h2>
+    <div class="md-toolbar-tools main-nav">
+      <md-button style="border: 2px solid #fff;" ng-link="home">Home</md-button>
+      <md-button style="border: 2px solid #fff;" ng-link="detail({id: 5})">Detail</md-button>
+      <md-button style="border: 2px solid #fff;" ng-link="test({id: 5})">Child Detail</md-button>
+    </div>
+  </md-toolbar>
+  <md-content>
+     
+    <div ng-viewport=""></div>
+  </md-content>
+</body>
+
+</html>
